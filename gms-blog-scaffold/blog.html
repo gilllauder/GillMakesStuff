@@ -1,0 +1,30 @@
+---
+layout: default
+title: Journal
+permalink: /blog/
+---
+<section class="lib-hero">
+  <div class="wrap">
+    <span class="eyebrow">The journal</span>
+    <h1>Notes from the workshop.</h1>
+    <p>What I'm making, how it's going, and the mistakes I learn the most from — written by hand between makes.</p>
+  </div>
+</section>
+
+<svg class="seam wrap" viewBox="0 0 1120 22" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="11" x2="1120" y2="11" stroke="currentColor" stroke-width="1.5" stroke-dasharray="14 10"/></svg>
+
+<section class="blog-list">
+  <div class="wrap">
+    {% if site.posts.size == 0 %}
+      <p class="empty-note">No posts yet — the first one is on its way.</p>
+    {% endif %}
+    {% for post in site.posts %}
+    <a class="post-card" href="{{ post.url | relative_url }}">
+      <p class="post-meta">{{ post.date | date: "%-d %B %Y" }}{% if post.category %} &middot; {{ post.category }}{% endif %}</p>
+      <h2>{{ post.title }}</h2>
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+      <span class="readmore">Read &rarr;</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
