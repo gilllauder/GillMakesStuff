@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free downloads — Gill Makes Stuff</title>
+<meta name="description" content="Free templates, cut files and printables from Gill Makes Stuff: SVG cut files, STL print files and PDF printables across sewing, bookbinding, 3D printing and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3eee2;--stone:#cabfa6;--ink:#3a5a40;--ink-deep:#2c4531;
+    --terra:#c4714f;--mauve:#9d7e9b;--paper-2:#ece4d3;--line:#d8cdb6;
+    --display:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --body:'Fraunces',Georgia,'Times New Roman',serif;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink-deep);font-family:var(--body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  a{color:var(--ink);text-decoration:none;}
+  h1,h2,h3,nav,.eyebrow,.wordmark,.tag,.badge,.chip,.foot-head,.dlink{font-family:var(--display);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem;}
+  .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin:0 0 .9rem;display:inline-block;}
+  :focus-visible{outline:2.5px solid var(--terra);outline-offset:3px;}
+
+  /* header */
+  header.bar{position:sticky;top:0;z-index:40;background:rgba(243,238,226,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .bar-in{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .wordmark{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:1.15rem;color:var(--ink);}
+  .wordmark .gms{display:inline-flex;width:30px;height:30px;}
+  .nav{display:flex;gap:1.7rem;}
+  .nav a{font-size:.85rem;font-weight:500;letter-spacing:.04em;color:var(--ink-deep);position:relative;}
+  .nav a.active{color:var(--terra);}
+  .nav a::after{content:"";position:absolute;left:0;bottom:-5px;height:1.5px;width:0;background:var(--terra);transition:width .2s ease;}
+  .nav a:hover::after,.nav a.active::after{width:100%;}
+  @media(max-width:680px){.nav{display:none;}}
+
+  /* page hero band */
+  .lib-hero{background:var(--ink);color:var(--paper);padding:3.6rem 0 3.2rem;}
+  .lib-hero .eyebrow{color:var(--stone);}
+  .lib-hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 1rem;}
+  .lib-hero p{max-width:38rem;margin:0;font-size:1.15rem;color:var(--stone);}
+
+  /* seam */
+  .seam{display:block;width:100%;height:22px;color:var(--line);}
+
+  /* controls */
+  .controls{padding:2.2rem 0 0;}
+  .chips{display:flex;flex-wrap:wrap;gap:.6rem;}
+  .chip{font-size:.82rem;font-weight:500;letter-spacing:.02em;color:var(--ink);background:transparent;border:1.5px solid var(--line);padding:.5rem 1rem;border-radius:100px;cursor:pointer;transition:all .18s ease;}
+  .chip:hover{border-color:var(--ink);}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .count{margin:1.2rem 0 0;font-family:var(--display);font-size:.8rem;letter-spacing:.04em;color:var(--mauve);}
+
+  /* grid */
+  .lib{padding:1.6rem 0 4.5rem;}
+  .dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+  .dl{background:var(--paper-2);border:1px solid var(--line);border-radius:5px;padding:1.5rem 1.5rem 1.6rem;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease;}
+  .dl:hover{transform:translateY(-4px);box-shadow:0 16px 30px -20px rgba(44,69,49,.6);}
+  .dl-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;}
+  .badge{font-size:.64rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .55rem;border-radius:3px;color:var(--paper);}
+  .badge.svg{background:var(--terra);}
+  .badge.stl{background:var(--mauve);}
+  .badge.pdf{background:var(--ink);}
+  .craft{font-family:var(--display);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--mauve);}
+  .dl h3{font-family:var(--display);font-weight:600;font-size:1.12rem;line-height:1.25;margin:0 0 .5rem;color:var(--ink);}
+  .dl p{margin:0 0 1rem;font-size:.97rem;color:var(--ink-deep);flex:1;}
+  .dl .meta{font-family:var(--display);font-size:.74rem;letter-spacing:.03em;color:var(--ink-deep);opacity:.75;margin-bottom:1.1rem;}
+  .dlink{font-weight:500;font-size:.88rem;color:var(--terra);display:inline-flex;align-items:center;gap:.45rem;align-self:flex-start;}
+  .dlink svg{width:16px;height:16px;transition:transform .2s ease;}
+  .dl:hover .dlink svg{transform:translateY(2px);}
+  .empty{display:none;text-align:center;padding:3rem 0;font-family:var(--display);color:var(--mauve);}
+  @media(max-width:880px){.dl-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.dl-grid{grid-template-columns:1fr;}}
+
+  /* footer */
+  footer{background:var(--ink-deep);color:var(--stone);padding:3rem 0 2.3rem;}
+  .foot-in{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start;}
+  .foot-head{font-weight:600;color:var(--paper);font-size:1.05rem;display:flex;align-items:center;gap:.55rem;margin-bottom:.5rem;}
+  .foot-head svg{width:26px;height:26px;}
+  footer .links{display:flex;gap:1.4rem;flex-wrap:wrap;}
+  footer .links a{font-family:var(--display);font-size:.85rem;font-weight:500;color:var(--stone);letter-spacing:.03em;}
+  footer .links a:hover{color:var(--terra);}
+  .foot-bottom{margin-top:2.3rem;padding-top:1.3rem;border-top:1px solid rgba(202,191,166,.2);font-family:var(--display);font-size:.78rem;color:rgba(202,191,166,.7);}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;}.reveal{opacity:1;transform:none;transition:none;}.dl:hover{transform:none;}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="wordmark" href="index.html" aria-label="Gill Makes Stuff home">
+      <span class="gms" aria-hidden="true"><svg viewBox="0 0 64 64" width="30" height="30" fill="#3a5a40"><path d="M14 40c-3-2-6-7-5-12 1 3 3 5 5 6-2-4-2-9 1-13 0 3 1 5 3 7-1-5 1-10 6-13-1 3-1 6 1 8 2-5 7-8 13-8-3 2-5 5-5 8 4-3 9-4 14-2-4 1-7 3-8 6 3 0 6 1 8 4-3-1-6-1-8 0 4 4 5 8 4 12-1-2-3-4-5-5l2 9-6-5-1 7-4-6-4 7-3-7-6 5c0 0 1-3 0-5z"/></svg></span>
+      Gill Makes Stuff
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#make">What I make</a>
+      <a href="index.html#watch">Watch</a>
+      <a href="downloads.html" class="active" aria-current="page">Free downloads</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="lib-hero">
+  <div class="wrap">
+    <span class="eyebrow">Free to use</span>
+    <h1>The downloads library.</h1>
+    <p>Every template, cut file and printable from the channel — free to download and use. Sized for a 300&times;300mm cutting area where it matters, and tested before it goes up. Filter by craft below.</p>
+  </div>
+</section>
+
+<svg class="seam wrap" viewBox="0 0 1120 22" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="11" x2="1120" y2="11" stroke="currentColor" stroke-width="1.5" stroke-dasharray="14 10"/></svg>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="chips" role="group" aria-label="Filter downloads by craft">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="sewing" aria-pressed="false">Sewing</button>
+      <button class="chip" data-filter="bookbinding" aria-pressed="false">Bookbinding</button>
+      <button class="chip" data-filter="leatherwork" aria-pressed="false">Leatherwork</button>
+      <button class="chip" data-filter="printing" aria-pressed="false">3D printing</button>
+      <button class="chip" data-filter="knitting" aria-pressed="false">Knitting</button>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="lib">
+  <div class="wrap">
+    <div class="dl-grid" id="grid">
+
+      <article class="dl reveal" data-cat="sewing">
+        <div class="dl-top"><span class="badge svg">SVG</span><span class="craft">Sewing</span></div>
+        <h3>Gusseted zip pouch</h3>
+        <p>Three sizes with scored fold lines built in. The everyday pouch from the channel — good for notions, cables or a project bag.</p>
+        <div class="meta">Cut file · 3 sizes · A2L-ready</div>
+        <a class="dlink" href="#">Download SVG <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="bookbinding">
+        <div class="dl-top"><span class="badge pdf">PDF</span><span class="craft">Bookbinding</span></div>
+        <h3>Traveller's notebook inserts</h3>
+        <p>Lined, dot-grid and plain, sized for a standard traveller's notebook. Print double-sided and fold.</p>
+        <div class="meta">Printable · 3 layouts · A4 → TN</div>
+        <a class="dlink" href="#">Download PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="printing">
+        <div class="dl-top"><span class="badge stl">STL</span><span class="craft">3D printing</span></div>
+        <h3>Label card storage box</h3>
+        <p>Press-fit lid, prints without supports. Tidies away the little label cards that pile up on the bench.</p>
+        <div class="meta">Print file · No supports · Bambu profile in notes</div>
+        <a class="dlink" href="#">Download STL <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="sewing knitting">
+        <div class="dl-top"><span class="badge svg">SVG</span><span class="craft">Sewing · Knitting</span></div>
+        <h3>Interchangeable needle case</h3>
+        <p>Roll-up case with sized slots for interchangeable tips and cables, plus a tie closure. Cut, fold and sew.</p>
+        <div class="meta">Cut file · Roll-up · A2L-ready</div>
+        <a class="dlink" href="#">Download SVG <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="sewing">
+        <div class="dl-top"><span class="badge svg">SVG</span><span class="craft">Sewing</span></div>
+        <h3>Drawstring bag base</h3>
+        <p>Circular base and side panel that scale together — the foundation for project bags in any size.</p>
+        <div class="meta">Cut file · Scalable · A2L-ready</div>
+        <a class="dlink" href="#">Download SVG <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="bookbinding">
+        <div class="dl-top"><span class="badge pdf">PDF</span><span class="craft">Bookbinding</span></div>
+        <h3>A5 journal insert pack</h3>
+        <p>Habit tracker, daily diary, ideas book and a video-planning book, all set up for saddle-stitch imposition with crow covers.</p>
+        <div class="meta">Printable · 4 booklets · Imposed for print</div>
+        <a class="dlink" href="#">Download PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="printing">
+        <div class="dl-top"><span class="badge stl">STL</span><span class="craft">3D printing</span></div>
+        <h3>Press-top lamp housing</h3>
+        <p>Parametric housing for the Bambu LED lamp kit, with a press-top on/off mechanism. Designed in OpenSCAD.</p>
+        <div class="meta">Print file · Press-top · Source SCAD included</div>
+        <a class="dlink" href="#">Download STL <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="sewing">
+        <div class="dl-top"><span class="badge svg">SVG</span><span class="craft">Sewing</span></div>
+        <h3>Gusseted pocket template</h3>
+        <p>Add a proper boxed pocket to a bag interior or pouch. Fold lines scored, three depths.</p>
+        <div class="meta">Cut file · 3 depths · A2L-ready</div>
+        <a class="dlink" href="#">Download SVG <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+      <article class="dl reveal" data-cat="bookbinding leatherwork printing">
+        <div class="dl-top"><span class="badge stl">STL</span><span class="craft">Bookbinding · Leatherwork</span></div>
+        <h3>Saddle-stitch punching jig</h3>
+        <p>Evenly-spaced hole guide for hand-stitching spines and leather. The jig I reach for on nearly every binding.</p>
+        <div class="meta">Print file · Even spacing · Prints flat</div>
+        <a class="dlink" href="#">Download STL <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg></a>
+      </article>
+
+    </div>
+    <p class="empty" id="empty">Nothing here yet for that craft — try another filter.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <div class="foot-head"><svg viewBox="0 0 64 64" fill="#f3eee2" aria-hidden="true"><path d="M14 40c-3-2-6-7-5-12 1 3 3 5 5 6-2-4-2-9 1-13 0 3 1 5 3 7-1-5 1-10 6-13-1 3-1 6 1 8 2-5 7-8 13-8-3 2-5 5-5 8 4-3 9-4 14-2-4 1-7 3-8 6 3 0 6 1 8 4-3-1-6-1-8 0 4 4 5 8 4 12-1-2-3-4-5-5l2 9-6-5-1 7-4-6-4 7-3-7-6 5c0 0 1-3 0-5z"/></svg>Gill Makes Stuff</div>
+      <p style="margin:0;max-width:22rem;font-size:.95rem;color:var(--stone);">All files free to use. A credit back to the channel is always welcome.</p>
+    </div>
+    <div class="links" aria-label="Elsewhere">
+      <a href="index.html">Home</a>
+      <a href="#">YouTube</a>
+      <a href="#">Instagram</a>
+      <a href="#">Email</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">© <span id="yr"></span> Gill Makes Stuff · Highland green &amp; warm stone</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const chips = Array.from(document.querySelectorAll('.chip'));
+  const cards = Array.from(document.querySelectorAll('.dl'));
+  const countEl = document.getElementById('count');
+  const emptyEl = document.getElementById('empty');
+
+  function apply(filter){
+    let shown = 0;
+    cards.forEach(card=>{
+      const cats = card.dataset.cat.split(' ');
+      const match = filter === 'all' || cats.includes(filter);
+      card.style.display = match ? '' : 'none';
+      if(match) shown++;
+    });
+    emptyEl.style.display = shown ? 'none' : 'block';
+    const label = filter === 'all' ? 'all crafts' : chips.find(c=>c.dataset.filter===filter).textContent.toLowerCase();
+    countEl.textContent = shown + (shown === 1 ? ' file' : ' files') + ' · ' + label;
+  }
+
+  chips.forEach(chip=>{
+    chip.addEventListener('click',()=>{
+      chips.forEach(c=>c.setAttribute('aria-pressed','false'));
+      chip.setAttribute('aria-pressed','true');
+      apply(chip.dataset.filter);
+    });
+  });
+  apply('all');
+
+  // reveal
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(el=>io.observe(el));
+  } else { els.forEach(el=>el.classList.add('in')); }
+</script>
+</body>
+</html>
