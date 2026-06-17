@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "GillMakesStuff",
+			"path": "../../../../Documents/GitHub/GillMakesStuff"
+		},
+		{
+			"name": "gms-blog-scaffold",
+			"path": ".."
+		},
+		{
+			"name": "gms-blog-scaffold",
+			"path": "../../../blog/gms-blog-scaffold"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "GillMakesStuff"
+	}
+}

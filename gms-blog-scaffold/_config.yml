@@ -1,0 +1,28 @@
+title: Gill Makes Stuff
+description: Making things by hand in a birch wood in the Scottish Highlands.
+url: "https://gillmakesstuff.co.uk"
+baseurl: ""
+timezone: Europe/London
+
+# Blog posts live at gillmakesstuff.co.uk/blog/<post-title>/
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Every file in _posts uses the post layout automatically,
+# so you don't have to write "layout: post" in each one.
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+
+# Keep these out of the built site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
